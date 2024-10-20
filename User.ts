@@ -1,4 +1,4 @@
-class User{
+class users{
     Id: number;
     Name: string ;
     Email: string ;

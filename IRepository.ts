@@ -1,6 +1,4 @@
 interface IRepository {
-    //fetchUser(): string[];
-    //addUser(user: string):void;
-    fetchUsers(): User[];
-    addUser(user: User): void;
+    AddUser(user: users): void;
+    GetUser(Id: number):users;
 }

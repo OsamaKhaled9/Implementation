@@ -1,14 +1,18 @@
   class UserService {
-    constructor(private readonly repository: IRepository) {}
-  
-    getAllUsers(): User[] {
-      return this.repository.fetchUser();
+    private userRepo: UserRepository ; 
+
+    constructor(userRepo: IRepository) {
+      this.userRepo = userRepo;
     }
-  
-    createUser(user: User): void {
-      // Validate user details here
-      // ...
-  
-      this.repository.addUser(user);
+
+    AddNewUser(name: string, email: string){
+      const newUser = new users();
+      newUser.Name = name;
+      newUser.Email = email;
+      this.userRepo.AddUser(newUser);
+    }
+    
+    getUsersById(Id : number): User{
+      return this.userRepo.GetUser(Id);
     }
   }
