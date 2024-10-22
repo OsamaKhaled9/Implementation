@@ -1,4 +1,4 @@
-import { promises as fs } from 'fs'; // File system operations with promises
+import { promises as fs } from 'fs';  // File system operations with promises
 import { User } from './User';       // Importing the User entity
 import * as path from 'path';
 
@@ -10,12 +10,12 @@ export interface UserRepository {
 }
 
 // Implementation of the repository
-export class JsonUserRepository implements UserRepository {
+export class UserRepository implements UserRepository {
     private filePath: string;
 
     constructor() {
         // Path to the users.json file
-        this.filePath = path.join(__dirname, 'users.json');
+        this.filePath ='users.json';
     }
 
     // Helper method to read data from the file. Reads the JSON file and parses it as an array of User objects.
