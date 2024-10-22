@@ -1,4 +1,4 @@
-import { UserRepository } from './Repository';
+import { UserRepository } from './UserRepository';
 import { User } from './User';
 
 (async () => {
