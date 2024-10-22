@@ -1,18 +1,12 @@
 [
-    {
-      "id": 1,
-      "name": "Osama Khaled",
-      "email": "osama.khaled@example.com"
-    },
-    {
-      "id": 2,
-      "name": "Hazem Hammad",
-      "email": "Hazem.hammad@example.com"
-    },
-    {
-        "id": 3,
-        "name": "Faisal Fahad",
-        "email": "faisal.fahad@example.com"
-    }
-  ]
-  
+  {
+    "id": 1,
+    "name": "Alice",
+    "email": "alice@example.com"
+  },
+  {
+    "id": 2,
+    "name": "Bob",
+    "email": "bob@example.com"
+  }
+]
