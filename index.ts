@@ -1,9 +1,8 @@
 import { UserRepository } from './UserRepository';
-import { User } from './User';
 
 (async () => {
-    let id = 2;
-    let username = 'Hamada';
+    let id = 4;
+    let username = 'Pablo Escobar';
     const repository = new UserRepository();
 
     await repository.addUser({ id, name: username, email: `${username}@example.com` });

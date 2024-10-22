@@ -1,6 +1,5 @@
 import { promises as fs } from 'fs';  // File system operations with promises
 import { User } from './User';       // Importing the User entity
-import * as path from 'path';
 
 export class UserRepository implements UserRepository {
     private filePath: string;
