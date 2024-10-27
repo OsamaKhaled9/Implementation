@@ -1,24 +1,19 @@
-import { UserRepository } from './UserRepository';
+// index.ts
+import { UserService } from './Service';
+
 (async () => {
-    let id = 5;
-    let username = 'Yahya_Gad';
-    const repository = new UserRepository();
+    const userService = new UserService();
+    const userId = 5;
+    const userName = 'Yahya_Gad';
 
-    // Await the result of getUserById to check if the user already exists
-    const existingUser = await repository.getUserById(id);
-
-    if (existingUser == null) { // If no user with the given ID exists
-        await repository.addUser({ id, name: username, email: `${username}@example.com` });
-        console.log(`User ${username} added.`);
-    } else {
-        console.log(`User ${username} already exists`);
-    }
+    // Add a user if they do not already exist
+    await userService.addUser(userId, userName);
 
     // Retrieve all users
-    const users = await repository.getAllUsers();
+    const users = await userService.getAllUsers();
     console.log("All users:", users);
 
-    // Retrieve a user by ID
-    const user = await repository.getUserById(id);
-    console.log("User with ID", id, user);
+    // Retrieve a specific user by ID
+    const user = await userService.getUserById(userId);
+    console.log("User with ID", userId, user);
 })();
